@@ -1,1 +1,4 @@
-User-agent: *\nAllow: /\nSitemap: https://somsoo.github.io/dog-walk-weather/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://dog-walk-weather.enjoy-onepage.com/sitemap.xml
