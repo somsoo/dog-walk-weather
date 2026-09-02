@@ -16,16 +16,189 @@
     </style>
 </head>
 <body>
-    <div class="ad-slot">구글 애드센스 (상단)</div>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2228289204702106" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
     
     <div class="card">
         <h1>반려견 산책 신호등</h1>
         <p>강아지 산책 적합도(날씨) 및 소모 칼로리를 계산해줍니다.</p>
         
-        <div style="padding: 40px 0; border: 1px solid #e5e7eb; border-radius: 10px; margin: 20px 0; background: #f3f4f6;">
-            <!-- UI 로직 들어갈 자리 -->
-            <p style="color: #6b7280; font-weight: bold;">[계산기 / 변환기 UI 영역]</p>
+        <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 400px; margin: 20px auto; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-color: #fcfcfc; color: #333; overflow: hidden;">
+    <h2 style="text-align: center; color: #4CAF50; margin-bottom: 25px; font-size: 24px; font-weight: bold;">🐶 반려견 산책 신호등 🚦</h2>
+    <p style="text-align: center; color: #666; font-size: 14px; margin-bottom: 30px;">
+        날씨 적합도와 예상 소모 칼로리를 확인하여 안전하고 즐거운 산책을 계획하세요!
+    </p>
+
+    <div style="margin-bottom: 20px;">
+        <label for="dogWeight" style="display: block; margin-bottom: 8px; font-weight: 600; color: #555;">🐕 반려견 체중 (kg)</label>
+        <input type="number" id="dogWeight" value="10" min="1" step="0.1" style="width: calc(100% - 24px); padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; box-sizing: border-box;">
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <label for="temperature" style="display: block; margin-bottom: 8px; font-weight: 600; color: #555;">🌡️ 현재 기온 (°C)</label>
+        <input type="number" id="temperature" value="20" step="0.1" style="width: calc(100% - 24px); padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; box-sizing: border-box;">
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <label for="humidity" style="display: block; margin-bottom: 8px; font-weight: 600; color: #555;">💧 습도 (%)</label>
+        <input type="number" id="humidity" value="50" min="0" max="100" style="width: calc(100% - 24px); padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; box-sizing: border-box;">
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <label for="windSpeed" style="display: block; margin-bottom: 8px; font-weight: 600; color: #555;">💨 풍속 (m/s)</label>
+        <input type="number" id="windSpeed" value="3" min="0" step="0.1" style="width: calc(100% - 24px); padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; box-sizing: border-box;">
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <label for="walkDuration" style="display: block; margin-bottom: 8px; font-weight: 600; color: #555;">⏱️ 산책 시간 (분)</label>
+        <input type="number" id="walkDuration" value="30" min="10" step="5" style="width: calc(100% - 24px); padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; box-sizing: border-box;">
+    </div>
+
+    <div style="margin-bottom: 30px;">
+        <label for="walkIntensity" style="display: block; margin-bottom: 8px; font-weight: 600; color: #555;">🏃‍♀️ 산책 강도</label>
+        <select id="walkIntensity" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; background-color: white; appearance: none; -webkit-appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%00-13-5.4H18.4c-6.5%200-12.3%203.2-15.8%208.1-3.5%204.9-3.9%2011.5-1%2016.4l132.8%20140c6.6%207%2017.4%207%2024%200l132.8-140c2.9-4.9%202.5-11.6-.9-16.4z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 12px center; background-size: 12px;">
+            <option value="leisurely">느긋하게 (느린 산책)</option>
+            <option value="normal" selected>보통 (일반 산책)</option>
+            <option value="brisk">빠르게 (활동적인 산책)</option>
+            <option value="running">뛰기 (조깅/달리기)</option>
+        </select>
+    </div>
+
+    <button id="calculateButton" style="width: 100%; padding: 15px; background-color: #4CAF50; color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); outline: none;">
+        계산하기
+    </button>
+
+    <div id="results" style="margin-top: 35px; padding: 25px; background-color: #f9f9f9; border-radius: 12px; border: 1px dashed #e0e0e0; display: none; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);">
+        <h3 style="text-align: center; color: #333; margin-bottom: 20px; font-size: 22px;">🧾 산책 결과 영수증 🧾</h3>
+        <div style="line-height: 1.8; font-size: 16px; color: #444;">
+            <p style="margin-bottom: 10px; border-bottom: 1px dotted #eee; padding-bottom: 5px; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: bold; color: #222;">산책 적합도:</span>
+                <span id="suitabilityResult" style="font-weight: bold;"></span>
+            </p>
+            <p style="margin-bottom: 10px; border-bottom: 1px dotted #eee; padding-bottom: 5px; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: bold; color: #222;">예상 소모 칼로리:</span>
+                <span id="caloriesResult" style="font-weight: bold;"></span>
+            </p>
+            <p style="margin-bottom: 10px; border-bottom: 1px dotted #eee; padding-bottom: 5px; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: bold; color: #222;">권장 사항:</span>
+                <span id="recommendationResult" style="font-weight: bold; text-align: right; max-width: 60%;"></span>
+            </p>
         </div>
+        <div style="font-size: 13px; color: #888; text-align: center; margin-top: 25px;">
+            <p style="margin: 0;">-- 안전하고 행복한 산책 되세요! --</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('calculateButton').addEventListener('click', function() {
+        const dogWeight = parseFloat(document.getElementById('dogWeight').value);
+        const temperature = parseFloat(document.getElementById('temperature').value);
+        const humidity = parseFloat(document.getElementById('humidity').value);
+        const windSpeed = parseFloat(document.getElementById('windSpeed').value);
+        const walkDuration = parseFloat(document.getElementById('walkDuration').value);
+        const walkIntensity = document.getElementById('walkIntensity').value;
+
+        // --- Input Validation ---
+        if (isNaN(dogWeight) || dogWeight <= 0) {
+            alert('유효한 반려견 체중을 입력해주세요 (1kg 이상).');
+            return;
+        }
+        if (isNaN(temperature)) {
+            alert('유효한 현재 기온을 입력해주세요.');
+            return;
+        }
+        if (isNaN(humidity) || humidity < 0 || humidity > 100) {
+            alert('유효한 습도를 입력해주세요 (0-100%).');
+            return;
+        }
+        if (isNaN(windSpeed) || windSpeed < 0) {
+            alert('유효한 풍속을 입력해주세요 (0m/s 이상).');
+            return;
+        }
+        if (isNaN(walkDuration) || walkDuration <= 0) {
+            alert('유효한 산책 시간을 입력해주세요 (10분 이상).');
+            return;
+        }
+
+        // --- Weather Suitability Calculation ---
+        let tempScore = 0; // 0=Green, 1=Yellow, 2=Red
+        let humidityScore = 0;
+        let windScore = 0;
+
+        // Temperature suitability (Dog specific, e.g., brachycephalic breeds are more sensitive)
+        // General guide for most dogs:
+        // Below 0°C or above 30°C: Dangerous (Red)
+        // 0-5°C or 25-30°C: Caution (Yellow)
+        // 5-25°C: Ideal (Green)
+        if (temperature < 0 || temperature > 30) {
+            tempScore = 2; // Red: Too cold or too hot
+        } else if (temperature < 5 || temperature > 25) {
+            tempScore = 1; // Yellow: A bit cold or warm
+        }
+
+        // Humidity suitability
+        // Above 80%: Dangerous (Red)
+        // 60-80%: Caution (Yellow)
+        // Below 60%: Ideal (Green)
+        if (humidity > 80) {
+            humidityScore = 2; // Red: Too high
+        } else if (humidity > 60) {
+            humidityScore = 1; // Yellow: High
+        }
+
+        // Wind Speed suitability
+        // Above 10 m/s: Dangerous (Red)
+        // 5-10 m/s: Caution (Yellow)
+        // Below 5 m/s: Ideal (Green)
+        if (windSpeed > 10) {
+            windScore = 2; // Red: Too strong
+        } else if (windSpeed > 5) {
+            windScore = 1; // Yellow: Strong
+        }
+
+        let overallSuitabilityScore = Math.max(tempScore, humidityScore, windScore);
+        let suitabilityText = '';
+        let suitabilityColor = '';
+        let recommendationText = '';
+
+        if (overallSuitabilityScore === 2) {
+            suitabilityText = '⛔ 매우 부적합';
+            suitabilityColor = '#E74C3C'; // Red
+            recommendationText = '실내 활동을 권장합니다. 산책은 위험할 수 있습니다.';
+        } else if (overallSuitabilityScore === 1) {
+            suitabilityText = '⚠️ 주의 필요';
+            suitabilityColor = '#F39C12'; // Yellow
+            recommendationText = '짧게 산책하거나 반려견의 컨디션을 잘 살펴주세요.';
+        } else {
+            suitabilityText = '✅ 산책하기 좋음';
+            suitabilityColor = '#2ECC71'; // Green
+            recommendationText = '즐거운 산책 되세요!';
+        }
+
+        // --- Calorie Calculation (Simplified) ---
+        // Approximate Kcal/kg/minute. These are rough estimates and can vary greatly.
+        const calorieFactors = {
+            'leisurely': 0.05, // e.g., sniffing around, slow pace
+            'normal': 0.08,    // e.g., steady walking
+            'brisk': 0.12,     // e.g., brisk walking, some trotting
+            'running': 0.18    // e.g., sustained running/chasing
+        };
+        const calorieFactor = calorieFactors[walkIntensity] || calorieFactors['normal'];
+        const caloriesBurned = dogWeight * walkDuration * calorieFactor;
+
+        // --- Display Results ---
+        const resultsDiv = document.getElementById('results');
+        document.getElementById('suitabilityResult').innerHTML = `<span style="color: ${suitabilityColor}">${suitabilityText}</span>`;
+        document.getElementById('caloriesResult').textContent = `${caloriesBurned.toFixed(1)} kcal`;
+        document.getElementById('recommendationResult').textContent = recommendationText;
+
+        resultsDiv.style.display = 'block'; // Show the results section
+        // Scroll to the results for better mobile UX
+        resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+</script>
 
         <button class="btn-share" onclick="shareApp()">
             앱 공유하기 (Web Share API)
@@ -33,7 +206,9 @@
     </div>
 
     <div class="coupang-banner">쿠팡 파트너스 맞춤형 기획전 배너</div>
-    <div class="ad-slot">구글 애드센스 (하단)</div>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2228289204702106" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
 
     <!-- JSON-LD 구조화 데이터 -->
     <script type="application/ld+json">
