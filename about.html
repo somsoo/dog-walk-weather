@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>서비스 소개 및 산출 기준 | 강아지 산책 날씨 지수 계산기</title>
+  <meta name="description" content="기온·미세먼지·아스팔트 열기 기반 산책 적합도 및 소모 칼로리">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dog-walk-weather.enjoy-onepage.com/about.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col justify-between">
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 text-slate-900 font-bold hover:text-emerald-600 transition">
+        <span class="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-xs">반려견산책</span>
+        <span>강아지 산책 날씨 지수 계산기</span>
+      </a>
+      <a href="/" class="text-xs font-semibold text-slate-600 hover:text-emerald-600 transition">← 메인 도구로 돌아가기</a>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-8 w-full flex-grow">
+    <article class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+      <div>
+        <h1 class="text-2xl font-extrabold text-slate-900">서비스 소개 및 산출 기준</h1>
+        <p class="text-xs text-slate-500 mt-1">기온·미세먼지·아스팔트 열기 기반 산책 적합도 및 소모 칼로리</p>
+      </div>
+
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">1. 서비스 개발 목적</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          '강아지 산책 날씨 지수 계산기'는 실시간 기온, 체감온도, 미세먼지 농도와 반려견의 몸무게 및 산책 시간을 종합하여 산책 위험도를 판정하고 소모 열량을 계산해 주는 펫케어 유틸리티입니다.
+        </p>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">2. 핵심 산정 수식 및 알고리즘</h2>
+        <div class="space-y-2 text-sm text-slate-700">
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-800">산책 안전 지수(Score) =</strong> 온도 스트레스 지수(THI) + 미세먼지 수치 페널티 + 아스팔트 복사열 보정치
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-800">반려견 산책 소모 칼로리 =</strong> 몸무게(kg) × 산책시간(h) × 보행 속도 계수(METs 3.5 ~ 4.0)
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+            <strong class="text-slate-800">주의 경보 기준 =</strong> 한여름 아스팔트 45℃ 이상 열사병 위험 및 영하 10℃ 이하 동상 위험 자동 알림
+          </div>
+        </div>
+      </section>
+
+      <section class="space-y-3">
+        <h2 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-2">3. 데이터 보안 및 신뢰성</h2>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          본 도구는 사용자의 모든 입력값을 외부 서버로 전송하지 않고 브라우저(클라이언트) 메모리 상에서만 100% 로컬 연산합니다. 본 계산 결과는 모의 참고용이며 실제 적용 시에는 관련 공공기관 및 전문가 상담을 권장합니다.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-400">
+    &copy; 2026 강아지 산책 날씨 지수 계산기. All rights reserved.
+  </footer>
+</body>
+</html>
