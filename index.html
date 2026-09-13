@@ -81,7 +81,7 @@
         </script>
     </div>
 
-    <div class="glass-card w-full max-w-md p-8 mb-6">
+    <div class="glass-card w-full max-w-5xl p-3.5 sm:p-6 mb-8">
         <h1 class="text-3xl font-extrabold text-center text-gray-800 mb-2">반려견 산책 신호등</h1>
         <p class="text-center text-gray-600 mb-8">강아지 산책 적합도(날씨) 및 소모 칼로리를 계산해줍니다.</p>
         
@@ -109,7 +109,7 @@
   }
 </script>
 
-<div class="w-full mx-auto my-8 p-4 sm:p-6 bg-slate-50 rounded-3xl shadow-2xl border border-slate-100 font-sans text-slate-800">
+<div class="w-full mx-auto font-sans text-slate-800">
   <!-- Header -->
   <div class="text-center mb-8">
     <div class="inline-flex p-3 bg-brand-100 rounded-full text-brand-500 mb-3 animate-bounce">
@@ -121,7 +121,11 @@
     <p class="text-slate-500 mt-2 text-sm sm:text-base">오늘 우리 아이 산책은 안전할까요? 날씨와 칼로리를 즉시 계산해 드립니다.</p>
   </div>
 
-  <!-- Form Section -->
+  <!-- 2-COLUMN RESPONSIVE GRID -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+    <!-- LEFT COLUMN: INPUT FORM (6 COLS) -->
+    <div class="lg:col-span-6 space-y-5">
+      <!-- Form Section -->
   <form id="walkingForm" class="space-y-6 bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Dog Profile -->
@@ -218,13 +222,15 @@
       </div>
     </div>
 
-    <button type="submit" class="w-full py-4 bg-gradient-to-r from-brand-500 to-orange-500 hover:from-brand-600 hover:to-orange-600 text-white font-bold rounded-xl shadow-md transition duration-200 transform hover:-translate-y-0.5 active:translate-y-0">
-      신호등 진단 & 영수증 발행하기
+    <button type="submit" class="w-full py-4 bg-gradient-to-r from-brand-500 to-orange-500 hover:from-brand-600 hover:to-orange-600 text-white font-bold rounded-xl shadow-md transition duration-200 transform hover:-translate-y-0.5 active:translate-y-0 text-base">
+      🚦 신호등 진단 & 영수증 발행하기
     </button>
   </form>
+    </div>
 
-  <!-- Result / Output Display (Hidden by default) -->
-  <div id="resultContainer" class="hidden space-y-6 mt-8 animate-[fadeIn_0.5s_ease-out]">
+    <!-- RIGHT COLUMN: RESULTS & RECEIPT (6 COLS, STICKY ON PC) -->
+    <div class="lg:col-span-6 space-y-5 lg:sticky lg:top-6">
+      <div id="resultContainer" class="space-y-5 animate-[fadeIn_0.5s_ease-out]">
     
     <!-- Traffic Light Display Card -->
     <div class="bg-slate-900 rounded-2xl p-6 shadow-xl border border-slate-800 text-white">
@@ -501,7 +507,7 @@
         </script>
     </div>
 
-<footer class="w-full max-w-md text-center pb-8 text-sm text-gray-700/80">
+<footer class="w-full max-w-4xl text-center pb-8 text-sm text-gray-700/80">
         <div class="flex justify-center items-center gap-4 mb-3">
             <a href="terms.html" class="hover:text-gray-900 transition font-medium">이용약관</a>
             <span class="text-gray-400 text-xs">|</span>
