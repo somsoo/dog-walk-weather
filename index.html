@@ -57,7 +57,6 @@
       }
     ]
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); min-height: 100vh; font-family: 'Pretendard', sans-serif; }
         .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-radius: 20px; box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); border: 1px solid rgba(255, 255, 255, 0.18); }
@@ -543,18 +542,19 @@
   <!-- Preemptive UX Helper: Auto comma formatting & Result sharing -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Auto comma on number/text inputs with currency hints
-      const moneyInputs = document.querySelectorAll('input[type="text"], input[type="number"], input[inputmode="numeric"]');
+      // Safe Auto comma formatting: ONLY touch currency/amount inputs, NEVER touch text/names
+      const moneyInputs = document.querySelectorAll('input[type="text"], input[inputmode="numeric"]');
       moneyInputs.forEach(input => {
-        // Skip specific inputs like year, month, date, percent, id
         const name = (input.name || input.id || '').toLowerCase();
-        if (name.includes('year') || name.includes('month') || name.includes('day') || name.includes('rate') || name.includes('percent') || name.includes('age') || name.includes('score')) {
+        // Skip text, names, descriptions, titles, dog names
+        if (name.includes('name') || name.includes('title') || name.includes('memo') || name.includes('desc') || name.includes('dog')) {
           return;
         }
-        
-        // Listen to input
+        // Only format if explicitly money/price/amount
+        const isCurrency = name.includes('price') || name.includes('money') || name.includes('cost') || name.includes('amount') || name.includes('pay') || name.includes('wage');
+        if (!isCurrency) return;
+
         input.addEventListener('input', function(e) {
-          if (this.type === 'number') return; // native number handles own UI
           let val = this.value.replace(/[^0-9]/g, '');
           if (val) {
             this.value = Number(val).toLocaleString('ko-KR');
