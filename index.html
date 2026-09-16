@@ -2,10 +2,26 @@
 
 <html lang="ko">
 <head>
+    <!-- Performance Optimization: Resource Preconnect -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
 <style>
     *, *::before, *::after { box-sizing: border-box; }
     html, body { overflow-x: hidden; max-width: 100%; }
-</style>
+
+        /* U3 Accessibility: Global Keyboard Focus Ring Standard */
+        :focus-visible {
+            outline: 2px solid #3b82f6 !important;
+            outline-offset: 2px !important;
+        }
+        input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible {
+            outline: 2px solid #2563eb !important;
+            outline-offset: 1px !important;
+        }
+    
+    </style>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="index, follow" name="robots"/>
@@ -175,16 +191,16 @@
         </h2>
 <div>
 <label class="block text-xs font-semibold text-slate-500 mb-1">강아지 이름</label>
-<input class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" id="dogName" placeholder="예: 바둑이" required="" type="text"/>
+<input class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" id="dogName" placeholder="예: 바둑이" required="" type="text" aria-label="예: 바둑이" />
 </div>
 <div class="grid grid-cols-2 gap-3">
 <div>
 <label class="block text-xs font-semibold text-slate-500 mb-1">몸무게 (kg)</label>
-<input class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" id="dogWeight" max="100" min="1" placeholder="7.5" required="" step="0.1" type="number"/>
+<input class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" id="dogWeight" max="100" min="1" placeholder="7.5" required="" step="0.1" type="number" aria-label="7.5" />
 </div>
 <div>
 <label class="block text-xs font-semibold text-slate-500 mb-1">크기 분류</label>
-<select class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" id="dogSize">
+<select class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" id="dogSize" aria-label="dogSize">
 <option value="small">소형견 (~10kg)</option>
 <option selected="" value="medium">중형견 (10~25kg)</option>
 <option value="large">대형견 (25kg~)</option>
@@ -200,53 +216,53 @@
 <div class="grid grid-cols-2 gap-3">
 <div>
 <label class="block text-xs font-semibold text-slate-500 mb-1">현재 기온 (°C)</label>
-<input class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" id="temperature" max="50" min="-30" placeholder="18" required="" type="number"/>
+<input class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" id="temperature" max="50" min="-30" placeholder="18" required="" type="number" aria-label="18" />
 </div>
 <div>
 <label class="block text-xs font-semibold text-slate-500 mb-1">산책 시간 (분)</label>
-<input class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" id="walkDuration" max="180" min="5" placeholder="30" required="" type="number"/>
+<input class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition" id="walkDuration" max="180" min="5" placeholder="30" required="" type="number" aria-label="30" />
 </div>
 </div>
 <div>
 <label class="block text-xs font-semibold text-slate-500 mb-1">날씨 상태</label>
 <div class="grid grid-cols-3 gap-2">
 <label class="cursor-pointer border border-slate-200 rounded-xl p-2 text-center hover:bg-slate-50 transition block">
-<input checked="" class="sr-only peer" name="weather" type="radio" value="sunny"/>
+<input checked="" class="sr-only peer" name="weather" type="radio" value="sunny" aria-label="weather" />
 <div class="peer-checked:text-brand-500 peer-checked:font-bold">
 <span class="block text-lg">☀️</span>
 <span class="text-xs">맑음</span>
 </div>
 </label>
 <label class="cursor-pointer border border-slate-200 rounded-xl p-2 text-center hover:bg-slate-50 transition block">
-<input class="sr-only peer" name="weather" type="radio" value="cloudy"/>
+<input class="sr-only peer" name="weather" type="radio" value="cloudy" aria-label="weather" />
 <div class="peer-checked:text-brand-500 peer-checked:font-bold">
 <span class="block text-lg">☁️</span>
 <span class="text-xs">흐림</span>
 </div>
 </label>
 <label class="cursor-pointer border border-slate-200 rounded-xl p-2 text-center hover:bg-slate-50 transition block">
-<input class="sr-only peer" name="weather" type="radio" value="rainy"/>
+<input class="sr-only peer" name="weather" type="radio" value="rainy" aria-label="weather" />
 <div class="peer-checked:text-brand-500 peer-checked:font-bold">
 <span class="block text-lg">🌧️</span>
 <span class="text-xs">비</span>
 </div>
 </label>
 <label class="cursor-pointer border border-slate-200 rounded-xl p-2 text-center hover:bg-slate-50 transition block">
-<input class="sr-only peer" name="weather" type="radio" value="snowy"/>
+<input class="sr-only peer" name="weather" type="radio" value="snowy" aria-label="weather" />
 <div class="peer-checked:text-brand-500 peer-checked:font-bold">
 <span class="block text-lg">❄️</span>
 <span class="text-xs">눈</span>
 </div>
 </label>
 <label class="cursor-pointer border border-slate-200 rounded-xl p-2 text-center hover:bg-slate-50 transition block">
-<input class="sr-only peer" name="weather" type="radio" value="heatwave"/>
+<input class="sr-only peer" name="weather" type="radio" value="heatwave" aria-label="weather" />
 <div class="peer-checked:text-brand-500 peer-checked:font-bold">
 <span class="block text-lg">🥵</span>
 <span class="text-xs">폭염</span>
 </div>
 </label>
 <label class="cursor-pointer border border-slate-200 rounded-xl p-2 text-center hover:bg-slate-50 transition block">
-<input class="sr-only peer" name="weather" type="radio" value="freezing"/>
+<input class="sr-only peer" name="weather" type="radio" value="freezing" aria-label="weather" />
 <div class="peer-checked:text-brand-500 peer-checked:font-bold">
 <span class="block text-lg">🥶</span>
 <span class="text-xs">한파</span>
