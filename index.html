@@ -39,25 +39,58 @@
 <meta content="https://dog-walk-weather.enjoy-onepage.com/og-image.png" name="twitter:image"/>
 <!-- JSON-LD 구조화 데이터 (WebApplication Schema) -->
 <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "반려견 산책 지수 신호등 | 실시간 날씨·미세먼지·아스팔트 열기 안심 판독기",
-        "alternateName": "강아지산책신호등",
-        "url": "https://dog-walk-weather.enjoy-onepage.com/",
-        "description": "기온, 습도, 풍속, 미세먼지, 지면(아스팔트) 온도를 종합 분석하여 오늘 우리 강아지 산책 적합도를 신호등(🟢쾌적 / 🟡주의 / 🔴위험)으로 즉시 진단합니다.",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "All",
-        "inLanguage": "ko",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "KRW"
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://dog-walk-weather.enjoy-onepage.com/#webapp",
+      "name": "반려견 산책 신호등 🚦",
+      "url": "https://dog-walk-weather.enjoy-onepage.com/",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "description": "기온, 습도, 풍속, 미세먼지, 지면(아스팔트) 온도를 종합 분석하여 오늘 우리 강아지 산책 적합도를 신호등(🟢쾌적 / 🟡주의 / 🔴위험)으로 즉시 진단합니다.",
+      "image": "https://dog-walk-weather.enjoy-onepage.com/og-image.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
       }
-    ]
-    </script>
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dog-walk-weather.enjoy-onepage.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "여름철 산책하기 가장 안전한 시간대는 언제인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "일출 직후(새벽 5~7시) 또는 해가 완전히 진 후 지면 열기가 식은 밤 9시 이후가 가장 안전합니다. '7초 법칙(손등을 아스팔트에 7초간 대보기)'을 활용하세요."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "겨울철 산책 시 염화칼슘은 왜 위험한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "제설용 염화칼슘은 강아지 발바닥 피부를 부식시켜 궤양과 화상을 일으키며, 핥을 경우 구토 및 중독 증상을 유발하므로 산책 후 반드시 미온수로 씻겨야 합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "비나 눈이 올 때 우비만 입히면 산책해도 되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "우천 시 감전 위험 및 털 젖음으로 인한 급격한 저체온증이 발생할 수 있으므로, 실내 노즈워크 놀이로 대체하는 것을 권장합니다."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 <style>
         body { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); min-height: 100vh; font-family: 'Pretendard', sans-serif; }
         .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border-radius: 20px; box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); border: 1px solid rgba(255, 255, 255, 0.18); }
