@@ -5,7 +5,7 @@
     <link>https://dog-walk-weather.enjoy-onepage.com/</link>
     <description>기온·습도·풍속·미세먼지·아스팔트 온도를 분석해 오늘 강아지 산책 적합도를 🟢쾌적·🟡주의·🔴위험 신호등으로 알려줍니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 01 Oct 2026 03:12:25 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 03:39:35 +0900</lastBuildDate>
     <atom:link href="https://dog-walk-weather.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>반려견 산책 지수 신호등 | 날씨·미세먼지·아스팔트 온도 판독</title>
@@ -20,13 +20,6 @@
       <guid isPermaLink="true">https://dog-walk-weather.enjoy-onepage.com/terms.html</guid>
       <description>반려견 산책 신호등 서비스 이용약관입니다.</description>
       <pubDate>Thu, 01 Oct 2026 03:12:25 +0900</pubDate>
-    </item>
-    <item>
-      <title>서비스 소개 및 산출 기준 | 강아지 산책 날씨 지수 계산기</title>
-      <link>https://dog-walk-weather.enjoy-onepage.com/about.html</link>
-      <guid isPermaLink="true">https://dog-walk-weather.enjoy-onepage.com/about.html</guid>
-      <description>기온·미세먼지·아스팔트 열기 기반 산책 적합도 및 소모 칼로리</description>
-      <pubDate>Sat, 12 Sep 2026 01:00:00 +0900</pubDate>
     </item>
     <item>
       <title>개인정보처리방침 | 강아지 산책 날씨 지수 계산기</title>
